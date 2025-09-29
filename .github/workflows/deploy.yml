@@ -26,7 +26,7 @@ jobs:
         run: |
           docker build \
           --build-arg VITE_REQ_API_HOST=http://13.124.192.99:8080 \
-          -t ${{ secrets.DOCKER_HUB_USERNAME }}/react-auth-final ./routerAndjwt
+          -t ${{ secrets.DOCKER_HUB_USERNAME }}/react-auth-final ./routerAndJwt
           echo "${{ secrets.DOCKER_HUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/react-auth-final
 
